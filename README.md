@@ -1,27 +1,49 @@
-# MeteoAppV1
+# Progetto Meteo con Angular 18 🌤️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Benvenuto nel **Progetto Meteo con Angular 18**!  
+In questa repository troverai il codice sorgente per sviluppare un'applicazione meteo completa utilizzando **Angular 18**, con funzionalità che spaziano dalla ricerca delle città alla visualizzazione delle condizioni meteo in tempo reale.
 
-## Development server
+## Contenuti del Progetto
+- Integrazione con **Open Meteo API** per ottenere i dati meteo.
+- Utilizzo di **Nominatim OpenStreetMap** per la ricerca geolocalizzata.
+- Gestione dei preferiti tramite **LocalStorage**.
+- Visualizzazione dinamica degli stati del meteo con **FontAwesome Icons**.
+- Ottimizzazione delle funzionalità per migliorare l'esperienza utente.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Playlist su YouTube 🎥
+Segui la serie completa su YouTube per imparare a realizzare passo dopo passo questo progetto.  
+[**Guarda la playlist qui**](https://www.youtube.com/playlist?list=PLoZNHBEyxFQExSHZFBfMAyf0JaZbDXq1E)
 
-## Code scaffolding
+## Iscriviti al Canale! 📺
+Non perderti altri contenuti su Angular, sviluppo software e progetti innovativi!  
+Visita il mio canale [**Archety Dev**](https://www.youtube.com/@archetydev) e iscriviti per rimanere sempre aggiornato.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funzionalità Principali
+1. **Progettazione**: Use Case Diagram e analisi API.
+2. **Inizializzazione**: Configurazione del progetto Angular e Bootstrap.
+3. **Ricerca città**: Utilizzo di Nominatim OpenStreetMap.
+4. **Visualizzazione meteo**: Creazione di models e servizi per Open Meteo API.
+5. **Gestione preferiti**: Aggiunta, eliminazione e prevenzione dei duplicati.
 
-## Build
+## Come Utilizzare il Codice
+1. Clona questa repository:  
+```bash
+git clone https://github.com/tuo-username/angular-meteo-app.git
+```
+   
+2. Installa le dipendenze:
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Avvia il server di sviluppo:
+```bash
+ng serve
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Apri il browser e vai su:
+```bash
+http://localhost:4200
+```
+## Contributi e Feedback
+Se hai suggerimenti o domande, lascia un commento sotto i video della playlist o apri un'issue su questa repository.
