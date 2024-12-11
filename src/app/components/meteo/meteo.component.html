@@ -16,3 +16,64 @@
     </div>
     <div class="col-md-3"></div>
 </div>
+
+<hr />
+
+<div class="row">
+    <div class="col">
+        <h1>Preferiti</h1>
+
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let p of elencoPreferiti">
+                <button class="btn btn-danger btn-sm" (click)="EliminaPreferito(p.nome, p.lat, p.lon)">
+                    <i class="fa fa-trash fa-sm"></i>
+                </button>
+                <button class="btn btn-primary btn-sm ms-2" (click)="SelezionaCitta(p.lat, p.lon, p.nome)">
+                    <i class="fa fa-eye fa-sm"></i>
+                </button> {{ p.nome }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<hr />
+
+
+<div class="row">
+    <div class="col">
+
+        <div class="row">
+            <div class="col-md-10">
+                <h1>{{ locationSelezionata || "Seleziona la città" }}</h1>
+            </div>
+            <div class="col-md-2">
+                <button *ngIf="locationSelezionata" (click)="AggiungiPreferito()" type="button" class="btn btn-primary">
+                    <i class="fa fa-star"></i>
+                </button>
+            </div>
+        </div>
+        
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>{{ meteoDati?.hourly_units?.temperature_2m || 'Temperatura' }}</th>
+                    <th>{{ meteoDati?.hourly_units?.precipitation || 'Precipitazioni' }}</th>
+                    <th>Stato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of meteoDati?.hourly?.time; let i = index">
+                    <td>{{ ConvertiUnixDataToItaliano(t) }}</td>
+                    <td>{{ meteoDati!.hourly!.temperature_2m![i] }}</td>
+                    <td>{{ meteoDati!.hourly!.precipitation![i] }}</td>
+                    <!-- <td>{{ ConvertiCodiciMeteo(meteoDati!.hourly!.weathercode![i]) }}</td> -->
+                    <td>
+                        <i class="{{ ConvertiIconeMeteo(meteoDati!.hourly!.weathercode![i]) }}"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
